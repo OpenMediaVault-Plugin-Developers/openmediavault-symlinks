@@ -18,14 +18,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-require_once("openmediavault/object.inc");
-require_once("openmediavault/config.inc");
-require_once("openmediavault/error.inc");
-require_once("openmediavault/util.inc");
-require_once("openmediavault/rpcservice.inc");
-require_once("openmediavault/notify.inc");
+require_once("openmediavault/globals.inc");
+require_once("openmediavault/functions.inc");
 
-class OMVRpcServiceSymlinks extends OMVRpcServiceAbstract
+class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
 {
     public function getName()
     {
@@ -48,7 +44,7 @@ class OMVRpcServiceSymlinks extends OMVRpcServiceAbstract
         $this->validateMethodParams($params, "rpc.common.getlist");
         // Get the configuration object.
         $db = \OMV\Config\Database::getInstance();
-        $objects = $db->get("conf.service.symlinks.symlink");
+        $objects = $db->getAssoc("conf.service.symlinks.symlink");
         // Filter the result.
         return $this->applyFilter($objects, $params['start'], $params['limit'],
             $params['sortfield'], $params['sortdir']);
@@ -78,7 +74,7 @@ class OMVRpcServiceSymlinks extends OMVRpcServiceAbstract
         $isNew = $object->isNew();
         $db = \OMV\Config\Database::getInstance();
         // remove old symbolic link if modifying existing symlink
-        if ($isNew == OMV_NOTIFY_MODIFY) {
+        if ($isNew === false) {
             $oldObject = $db->getAssoc("conf.service.symlinks.symlink", $params['uuid']);
             if (is_link($oldObject->get('destination'))) {
                 unlink($oldObject->get('destination'));
@@ -86,10 +82,10 @@ class OMVRpcServiceSymlinks extends OMVRpcServiceAbstract
         }
         $db->set($object);
 
-        if ($object->('enable') === true) {
+        if ($object->get('enable') === true) {
             // Create symbolic link
             $success = false;
-            $success = symlink($object->get('source'), $object->('destination'));
+            $success = symlink($object->get('source'), $object->get('destination'));
             if (false === $success) {
                 throw new \OMV\Exception(
                     sprintf(

@@ -12,7 +12,7 @@
 			"type": "string",
 			"format": "uuidv4"
 		},
-		"enable: {
+		"enable": {
 			"type": "boolean",
 			"default": false
 		},

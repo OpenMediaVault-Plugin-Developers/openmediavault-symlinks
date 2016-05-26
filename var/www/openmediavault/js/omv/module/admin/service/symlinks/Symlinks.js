@@ -135,12 +135,14 @@ Ext.define("OMV.module.admin.service.symlinks.Symlinks", {
         text      : _("Source"),
         sortable  : true,
         dataIndex : "source",
-        stateId   : "source"
+        stateId   : "source",
+        flex      : 1
     },{
         text      : _("Destination"),
         sortable  : true,
         dataIndex : "destination",
-        stateId   : "destination"
+        stateId   : "destination",
+        flex      : 1
     }],
 
     initComponent: function() {
@@ -218,8 +220,8 @@ OMV.WorkspaceManager.registerNode({
     id      : "symlinks",
     path    : "/service",
     text    : _("Symlinks"),
-    icon16  : "images/downloader.png",
-    iconSvg : "images/downloader.svg"
+    icon16  : "images/symlinks.png",
+    iconSvg : "images/symlinks.svg"
 });
 
 OMV.WorkspaceManager.registerPanel({
