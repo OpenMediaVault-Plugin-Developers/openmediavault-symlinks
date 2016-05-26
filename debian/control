@@ -1,0 +1,16 @@
+Source: openmediavault-symlinks
+Section: net
+XB-Plugin-Section: filesystems
+Priority: optional
+Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+Build-Depends: debhelper (>= 9.0.0 )
+Standards-Version: 3.9.6
+Homepage: http://omv-extras.org/
+
+Package: openmediavault-symlinks
+Architecture: all
+Depends: openmediavault (>= 3.0.19),
+         openmediavault-omvextrasorg (>= 3.2),
+         ${misc:Depends}
+Description: OpenMediaVault symlinks plugin
+ Allow creation of symlinks.

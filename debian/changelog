@@ -1,0 +1,5 @@
+openmediavault-symlinks (3.0) stable; urgency=low
+
+  * Initial release after separation from downloader plugin
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 31 Aug 2015 07:00:14 -0500
