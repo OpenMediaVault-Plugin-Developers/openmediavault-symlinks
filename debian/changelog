@@ -1,3 +1,9 @@
+openmediavault-symlinks (3.1.1) stable; urgency=low
+
+  * Fix symlink edit
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 08 Jun 2016 09:19:08 -0500
+
 openmediavault-symlinks (3.1) stable; urgency=low
 
   * Update for auto notifications and omvextras-common package

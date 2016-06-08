@@ -76,8 +76,8 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
         // remove old symbolic link if modifying existing symlink
         if ($isNew === false) {
             $oldObject = $db->getAssoc("conf.service.symlinks.symlink", $params['uuid']);
-            if (is_link($oldObject->get('destination'))) {
-                unlink($oldObject->get('destination'));
+            if (is_link($oldObject['destination'])) {
+                unlink($oldObject['destination']);
             }
         }
         $db->set($object);
