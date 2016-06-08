@@ -95,13 +95,7 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
                 );
             }
         }
-        // Notify configuration changes.
-        $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
-        $dispatcher->notify(
-            $isNew ? OMV_NOTIFY_CREATE : OMV_NOTIFY_MODIFY,
-            "org.openmediavault.services.symlinks.symlink",
-            $object->getAssoc()
-        );
+
         // Return the configuration object.
         return $object->getAssoc();
     }
@@ -117,10 +111,11 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
             unlink($params['destination']);
         }
         // Delete the configuration object.
-        return $this->deleteConfigObjectByUuid(
-            "conf.service.symlinks.symlink",
-            $params['uuid'],
-            "org.openmediavault.services.symlinks.symlink"
-        );
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get("conf.service.symlinks.symlink", $params['uuid']);
+        $db->delete($object);
+
+        // Return the deleted configuration object.
+        return $object->getAssoc();
     }
 }

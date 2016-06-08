@@ -27,7 +27,7 @@
 // require("js/omv/data/Store.js")
 // require("js/omv/data/Model.js")
 // require("js/omv/data/proxy/Rpc.js")
-// require("js/omv/window/RootFolderBrowser.js")
+// require("js/omvextras/window/RootFolderBrowser.js")
 
 Ext.define("OMV.module.admin.service.symlinks.Symlink", {
     extend   : "OMV.workspace.window.Form",
@@ -37,7 +37,7 @@ Ext.define("OMV.module.admin.service.symlinks.Symlink", {
     uses: [
         "OMV.data.Model",
         "OMV.data.Store",
-        "OMV.window.RootFolderBrowser"
+        "OmvExtras.window.RootFolderBrowser"
     ],
 
     rpcService   : "Symlinks",
@@ -68,7 +68,7 @@ Ext.define("OMV.module.admin.service.symlinks.Symlink", {
                 }
             },
             onTriggerClick : function() {
-                Ext.create("OMV.window.RootFolderBrowser", {
+                Ext.create("OmvExtras.window.RootFolderBrowser", {
                     listeners : {
                         scope  : this,
                         select : function(wnd, node, path) {
@@ -90,7 +90,7 @@ Ext.define("OMV.module.admin.service.symlinks.Symlink", {
                 }
             },
             onTriggerClick : function() {
-                Ext.create("OMV.window.RootFolderBrowser", {
+                Ext.create("OmvExtras.window.RootFolderBrowser", {
                     listeners : {
                         scope  : this,
                         select : function(wnd, node, path) {
