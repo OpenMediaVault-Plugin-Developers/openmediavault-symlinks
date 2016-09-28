@@ -1,3 +1,9 @@
+openmediavault-symlinks (3.1.2) stable; urgency=low
+
+  * Update for OMV 3.0.40
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 27 Sep 2016 21:21:06 -0500
+
 openmediavault-symlinks (3.1.1) stable; urgency=low
 
   * Fix symlink edit

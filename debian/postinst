@@ -31,8 +31,8 @@ case "$1" in
 
         if ! omv_config_exists "${SERVICE_XPATH}"; then
             echo "Initialize configuration"
-            omv_config_add_element "/config/services" "${SERVICE_XPATH_NAME}"
-            omv_config_add_element "${SERVICE_XPATH}" "symlinks" ""
+            omv_config_add_node "/config/services" "${SERVICE_XPATH_NAME}"
+            omv_config_add_node "${SERVICE_XPATH}" "symlinks" ""
         fi
 
         dpkg-trigger update-fixperms
