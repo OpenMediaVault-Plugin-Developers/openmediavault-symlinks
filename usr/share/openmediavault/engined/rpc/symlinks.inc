@@ -82,7 +82,8 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
         }
         $db->set($object);
 
-        if ($object->get('enable') === true) {
+        if (($object->get('enable') === true) &&
+            (is_link($object->get('destination')) !== true)) {
             // Create symbolic link
             $success = false;
             $success = symlink($object->get('source'), $object->get('destination'));
@@ -106,15 +107,15 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodContext($context, ["role" => OMV_ROLE_ADMINISTRATOR]);
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, "rpc.common.objectuuid");
-        // remove old symbolic link
-        if (is_link($params['destination'])) {
-            unlink($params['destination']);
-        }
-        // Delete the configuration object.
+        // Get the configuration object.
         $db = \OMV\Config\Database::getInstance();
         $object = $db->get("conf.service.symlinks.symlink", $params['uuid']);
+        // remove old symbolic link
+        if (is_link($object->get('destination'))) {
+            unlink($object->get('destination'));
+        }
+        // Delete the configuration object.
         $db->delete($object);
-
         // Return the deleted configuration object.
         return $object->getAssoc();
     }
