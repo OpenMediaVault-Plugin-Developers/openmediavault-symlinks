@@ -81,22 +81,22 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
             }
         }
         $db->set($object);
-
-        if (($object->get('enable') === true) &&
-            (is_link($object->get('destination')) !== true)) {
+        if (($object->get('enable') === true) && (is_link($dest) !== true)) {
+            $dest = $object->get('destination');
+            if (file_exists($dest)) {
+                throw new \OMV\Exception(
+                    sprintf("Folder or directory already exists! %s", $dest)
+                );
+            }
             // Create symbolic link
             $success = false;
-            $success = symlink($object->get('source'), $object->get('destination'));
+            $success = symlink($object->get('source'), $dest);
             if (false === $success) {
                 throw new \OMV\Exception(
-                    sprintf(
-                        "Failed to create symbolic link at %s",
-                        $object->get('destination')
-                    )
+                    sprintf("Failed to create symbolic link at %s", $dest)
                 );
             }
         }
-
         // Return the configuration object.
         return $object->getAssoc();
     }
