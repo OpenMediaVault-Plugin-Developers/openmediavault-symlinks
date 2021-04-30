@@ -6,6 +6,9 @@ data:
   config:
     autoReload: false
     stateId: a982a76d-6804-3637-b31b-8b48c0ea6dde
+    sorters:
+      - dir: asc
+        prop: source
     store:
       proxy:
         service: Symlinks
