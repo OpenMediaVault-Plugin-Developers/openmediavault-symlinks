@@ -1,0 +1,6 @@
+version: "1.0"
+type: route
+data:
+  url: "/services/symlinks"
+  title: _("Symlinks")
+  component: omv-services-symlinks-datatable-page

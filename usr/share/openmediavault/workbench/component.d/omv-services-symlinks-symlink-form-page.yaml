@@ -1,0 +1,39 @@
+version: "1.0"
+type: component
+data:
+  name: omv-services-symlinks-symlink-form-page
+  type: formPage
+  config:
+    request:
+      service: Symlinks
+      get:
+        method: getSymlink
+      post:
+        method: setSymlink
+    fields:
+      - type: checkbox
+        name: enable
+        label: _("Enable")
+        value: true
+      - type: hidden
+        name: rootfsref
+        label: _("Root ref")
+        value: "79684322-3eac-11ea-a974-63a080abab18"
+      - type: folderBrowser
+        name: source
+        label: _("Source")
+        value: '/{{ source }}'
+        dirType: mntent
+        dirRefIdField: rootfsref
+      - type: folderBrowser
+        name: destination
+        label: _("Destination")
+        value: '/{{ destination }}'
+        dirType: mntent
+        dirRefIdField: rootfsref
+    buttons:
+      - template: submit
+      - template: cancel
+        execute:
+          type: url
+          url: "/services/symlinks"

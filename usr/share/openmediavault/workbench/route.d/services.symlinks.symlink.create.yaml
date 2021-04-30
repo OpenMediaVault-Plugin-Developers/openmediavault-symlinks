@@ -1,0 +1,7 @@
+version: "1.0"
+type: route
+data:
+  url: "/services/symlinks/symlink/create"
+  title: _("Create")
+  notificationTitle: _("Created symlink.")
+  component: omv-services-symlinks-symlink-form-page

@@ -1,0 +1,7 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "services.symlinks"
+  text: _("Symlinks")
+  icon: "mdi:link-variant"
+  url: "/services/symlinks"

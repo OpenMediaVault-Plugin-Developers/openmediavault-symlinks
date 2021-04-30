@@ -1,0 +1,37 @@
+{
+	"type": "config",
+	"id": "conf.service.symlinks",
+	"title": "Symlinks",
+	"queryinfo": {
+		"xpath": "//services/symlinks",
+		"iterable": false
+	},
+	"properties": {
+		"symlinks": {
+			"type": "object",
+			"properties": {
+				"symlink": {
+					"type": "array",
+					"items": {
+						"uuid": {
+							"type": "string",
+							"format": "uuidv4"
+						},
+						"enable": {
+							"type": "boolean",
+							"default": false
+						},
+						"source": {
+							"type": "string",
+							"default": ""
+						},
+						"destination": {
+							"type": "string",
+							"default": ""
+						}
+					}
+				}
+			}
+		}
+	}
+}

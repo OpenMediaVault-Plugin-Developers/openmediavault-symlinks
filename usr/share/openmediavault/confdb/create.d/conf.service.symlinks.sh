@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
@@ -21,27 +21,15 @@
 
 set -e
 
-. /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-case "$1" in
-    configure)
-        dpkg-trigger update-workbench
+SERVICE_XPATH_NAME="symlinks"
+SERVICE_XPATH="/config/services/${SERVICE_XPATH_NAME}"
 
-        echo "Updating configuration database ..."
-        omv-confdbadm create "conf.service.clamav"
-        if [ -n "$2" ]; then
-            omv-confdbadm migrate "conf.service.clamav" "${2}"
-        fi
-    ;;
-
-    abort-upgrade|abort-remove|abort-deconfigure)
-    ;;
-
-    *)
-        echo "postinst called with unknown argument '$1'" >&2
-        exit 1
-    ;;
-esac
+if ! omv_config_exists "${SERVICE_XPATH}"; then
+  echo "Initialize configuration"
+  omv_config_add_node "/config/services" "${SERVICE_XPATH_NAME}"
+  omv_config_add_node "${SERVICE_XPATH}" "symlinks" ""
+fi
 
 exit 0

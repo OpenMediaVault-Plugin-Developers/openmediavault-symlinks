@@ -1,0 +1,44 @@
+version: "1.0"
+type: component
+data:
+  name: omv-services-symlinks-datatable-page
+  type: datatablePage
+  config:
+    autoReload: false
+    stateId: a982a76d-6804-3637-b31b-8b48c0ea6dde
+    store:
+      proxy:
+        service: Symlinks
+        get:
+          method: getSymlinkList
+    columns:
+      - name: _("Enabled")
+        prop: enable
+        flexGrow: 1
+        sortable: true
+        cellTemplateName: checkIcon
+      - name: _("Source")
+        prop: source
+        flexGrow: 1
+        sortable: true
+      - name: _("Destination")
+        prop: destination
+        flexGrow: 1
+        sortable: true
+    actions:
+      - template: create
+        execute:
+          type: url
+          url: "/services/symlinks/symlink/create"
+      - template: edit
+        execute:
+          type: url
+          url: "/services/symlinks/symlink/edit/{{ _selected[0].uuid }}"
+      - template: delete
+        execute:
+          type: request
+          request:
+            service: Symlinks
+            method: deleteSymlink
+            params:
+              uuid: "{{ _selected[0].uuid }}"

@@ -1,0 +1,8 @@
+version: "1.0"
+type: route
+data:
+  url: "/services/symlinks/symlink/edit/:uuid"
+  title: _("Edit")
+  editing: true
+  notificationTitle: _("Edit symlink.")
+  component: omv-services-symlinks-symlink-form-page
