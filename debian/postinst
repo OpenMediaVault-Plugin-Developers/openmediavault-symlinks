@@ -29,9 +29,9 @@ case "$1" in
         dpkg-trigger update-workbench
 
         echo "Updating configuration database ..."
-        omv-confdbadm create "conf.service.clamav"
+        omv-confdbadm create "conf.service.symlinks"
         if [ -n "$2" ]; then
-            omv-confdbadm migrate "conf.service.clamav" "${2}"
+            omv-confdbadm migrate "conf.service.symlinks" "${2}"
         fi
     ;;
 
