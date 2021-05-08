@@ -8,31 +8,44 @@ data:
       service: Symlinks
       get:
         method: getSymlink
+        params:
+          uuid: "{{ _routeParams.uuid }}"
       post:
         method: setSymlink
     fields:
+      - type: confObjUuid
       - type: checkbox
         name: enable
         label: _("Enable")
         value: true
       - type: hidden
         name: rootfsref
-        label: _("Root ref")
         value: "79684322-3eac-11ea-a974-63a080abab18"
+        submitValue: false
+      - type: hidden
+        name: rootdir
+        value: "/"
+        submitValue: false
       - type: folderBrowser
         name: source
         label: _("Source")
-        value: '/{{ source }}'
+        value: ''
         dirType: mntent
         dirRefIdField: rootfsref
+        modifiers:
+          type: value
+          typeConfig: '/{{ destination }}/'
       - type: folderBrowser
         name: destination
         label: _("Destination")
-        value: '/{{ destination }}'
+        value: ''
         dirType: mntent
         dirRefIdField: rootfsref
     buttons:
       - template: submit
+        execute:
+          type: url
+          url: "/services/symlinks"
       - template: cancel
         execute:
           type: url

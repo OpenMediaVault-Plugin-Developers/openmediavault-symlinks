@@ -3,4 +3,4 @@ type: route
 data:
   url: "/services/symlinks"
   title: _("Symlinks")
-  component: omv-services-symlinks-datatable-page
+  component: omv-services-symlinks-symlink-datatable-page
