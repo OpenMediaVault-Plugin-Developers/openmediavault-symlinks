@@ -64,6 +64,12 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodContext($context, ["role" => OMV_ROLE_ADMINISTRATOR]);
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, "rpc.symlinks.setsymlink");
+        if (substr($params['source'],0,1) != '/') {
+            $params['source'] = '/' . $params['source'];
+        } 
+        if (substr($params['destination'],0,1) != '/') {
+            $params['destination'] = '/' . $params['destination'];
+        } 
         // Prepare the configuration object.
         $object = new \OMV\Config\ConfigObject("conf.service.symlinks.symlink");
         $object->setAssoc($params);
