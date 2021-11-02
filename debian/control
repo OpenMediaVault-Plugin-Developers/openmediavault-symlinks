@@ -10,6 +10,7 @@ Homepage: http://omv-extras.org/
 Package: openmediavault-symlinks
 Architecture: all
 Depends: openmediavault (>= 6.0),
+         openmediavault-sharerootfs,
          ${misc:Depends}
 Description: OpenMediaVault symlinks plugin
  Allow creation of symlinks.
