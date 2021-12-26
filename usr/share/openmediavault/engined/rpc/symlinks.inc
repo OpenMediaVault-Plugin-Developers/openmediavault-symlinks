@@ -31,6 +31,8 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod("getSymlink");
         $this->registerMethod("setSymlink");
         $this->registerMethod("deleteSymlink");
+        $this->registerMethod("enumerateSymlinks");
+        $this->registerMethod("importSymlink");
     }
 
     public function getSymlinkList($params, $context)
@@ -120,6 +122,57 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
         // Delete the configuration object.
         $db->delete($object);
         // Return the deleted configuration object.
+        return $object->getAssoc();
+    }
+
+    public function enumerateSymlinks($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        $cmdArgs = [];
+        $cmdArgs[] = "/";
+        $cmdArgs[] = "-maxdepth 4";
+        $cmdArgs[] = "-type l";
+        $cmdArgs[] = "-regextype posix-egrep";
+        $cmdArgs[] = "-not";
+        $cmdArgs[] = "-regex '/(bin|boot|dev|etc|lib|lib32|lib64|proc|run|sbin|sys|usr)/.*'";
+        $cmd = new \OMV\System\Process('find', $cmdArgs);
+        $cmd->setQuiet(true);
+        $cmd->setRedirect2toFile("/dev/null");
+        $output = [];
+        $cmd->execute($output, $exitStatus);
+        $objects = [];
+        $count = count($output);
+        for ($i = 0; $i < $count; $i++) {
+            if (strlen($output[$i]) < 2) {
+                continue;
+            }
+            $objects[] = ['link' => trim($output[$i])];
+        }
+        return ($objects);
+    }
+
+    public function importSymlink($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Validate the parameters of the RPC service method.
+        //$this->validateMethodParams($params, "rpc.symlinks.setsymlink");
+        // get source
+        $output = [];
+        $cmd = new \OMV\System\Process('readlink', $params['link']);
+        $cmd->execute($output, $exitStatus);
+        $source = $output[0];
+        // Prepare the configuration object.
+        $object = new \OMV\Config\ConfigObject("conf.service.symlinks.symlink");
+        $object->set('enable', true);
+        $object->set('source', $source);
+        $object->set('destination', $params['link']);
+        // Set the configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $db->assertIsUnique($object, "destination");
+        $db->set($object);
+        // Return the configuration object.
         return $object->getAssoc();
     }
 }

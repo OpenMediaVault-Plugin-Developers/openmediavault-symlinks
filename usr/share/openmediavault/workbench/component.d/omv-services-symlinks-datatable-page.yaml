@@ -46,3 +46,32 @@ data:
             method: deleteSymlink
             params:
               uuid: "{{ _selected[0].uuid }}"
+      - type: iconButton
+        icon: mdi:import
+        tooltip: _("Import existing symlink")
+        execute:
+          type: formDialog
+          formDialog:
+            title: _("Import existing symlink ...")
+            fields:
+              - type: select
+                name: link
+                label: _("Symlink")
+                textField: link
+                valueField: link
+                store:
+                  proxy:
+                    service: Symlinks
+                    get:
+                      method: enumerateSymlinks
+                  sorters:
+                    - dir: asc
+                      prop: link
+            buttons:
+              submit:
+                text: _("Import")
+                execute:
+                  type: request
+                  request:
+                    service: Symlinks
+                    method: importSymlink
