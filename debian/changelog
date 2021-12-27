@@ -1,3 +1,9 @@
+openmediavault-symlinks (6.0.3) stable; urgency=low
+
+  * Improve symlink import
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 26 Dec 2021 18:32:31 -0600
+
 openmediavault-symlinks (6.0.2) stable; urgency=low
 
   * Add existing symlink import

@@ -135,7 +135,7 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
         $cmdArgs[] = "-type l";
         $cmdArgs[] = "-regextype posix-egrep";
         $cmdArgs[] = "-not";
-        $cmdArgs[] = "-regex '/(bin|boot|dev|etc|lib|lib32|lib64|proc|run|sbin|sys|usr)/.*'";
+        $cmdArgs[] = "-regex '/(bin|boot|dev|etc|initrd|lib|lib(32|64)|proc|run|sbin|sys|usr|var/(run|lock|spool)|vmlinuz)/?.*'";
         $cmd = new \OMV\System\Process('find', $cmdArgs);
         $cmd->setQuiet(true);
         $cmd->setRedirect2toFile("/dev/null");
@@ -145,6 +145,9 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
         $count = count($output);
         for ($i = 0; $i < $count; $i++) {
             if (strlen($output[$i]) < 2) {
+                continue;
+            }
+            if (is_file($output[$i])) {
                 continue;
             }
             $objects[] = ['link' => trim($output[$i])];
