@@ -85,7 +85,6 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
                 unlink($oldObject['destination']);
             }
         }
-        $db->set($object);
         if (($object->get('enable') === true) && (is_link($dest) !== true)) {
             $dest = $object->get('destination');
             if (file_exists($dest)) {
@@ -102,6 +101,7 @@ class OMVRpcServiceSymlinks extends \OMV\Rpc\ServiceAbstract
                 );
             }
         }
+        $db->set($object);
         // Return the configuration object.
         return $object->getAssoc();
     }
