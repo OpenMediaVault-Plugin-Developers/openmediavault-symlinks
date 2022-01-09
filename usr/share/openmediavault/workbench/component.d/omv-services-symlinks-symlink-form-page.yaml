@@ -28,12 +28,14 @@ data:
         value: ''
         dirType: mntent
         dirRefIdField: rootfsref
+        hint: _("Where the data really is")
       - type: folderBrowser
         name: destination
         label: _("Destination")
         value: ''
         dirType: mntent
         dirRefIdField: rootfsref
+        hint: _("Where the data should show up")
     buttons:
       - template: submit
         execute:
