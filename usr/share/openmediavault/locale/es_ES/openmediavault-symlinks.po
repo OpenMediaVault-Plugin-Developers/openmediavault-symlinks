@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the openmediavault-symlinks package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Raul Fernandez Garcia <raulfg3@gmail.com>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,54 +13,55 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-09 15:01-0600\n"
 "PO-Revision-Date: 2022-01-09 20:59+0000\n"
-"Language-Team: Spanish (https://www.transifex.com/openmediavault-plugin-developers/teams/1854/es/)\n"
+"Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>, 2022\n"
+"Language-Team: Spanish (https://app.transifex.com/openmediavault-plugin-developers/teams/1854/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 msgid "Create"
-msgstr ""
+msgstr "Crear"
 
 msgid "Created symlink."
-msgstr ""
+msgstr "Crear un enlace"
 
 msgid "Destination"
-msgstr ""
+msgstr "Destino"
 
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 msgid "Enable"
-msgstr ""
+msgstr "Habiliar"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitado"
 
 msgid "Import"
-msgstr ""
+msgstr "Importar"
 
 msgid "Import existing symlink"
-msgstr ""
+msgstr "Importar enlace existente"
 
 msgid "Import existing symlink ..."
-msgstr ""
+msgstr "Importando enlace existente ..."
 
 msgid "Source"
-msgstr ""
+msgstr "Origen"
 
 msgid "Symlink"
-msgstr ""
+msgstr "Enlace"
 
 msgid "Symlinks"
-msgstr ""
+msgstr "Enlaces"
 
 msgid "Updated symlink."
-msgstr ""
+msgstr "Enlaces actualizados."
 
 msgid "Where the data really is"
-msgstr ""
+msgstr "Donde están los datos realmente"
 
 msgid "Where the data should show up"
-msgstr ""
+msgstr "Donde deben mostrase los datos"

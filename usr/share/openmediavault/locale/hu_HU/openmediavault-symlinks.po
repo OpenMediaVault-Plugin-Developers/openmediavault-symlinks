@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the openmediavault-symlinks package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Grawens <szabolcs.szanyi@gmail.com>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,7 +13,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-09 15:01-0600\n"
 "PO-Revision-Date: 2022-01-09 20:59+0000\n"
-"Language-Team: Hungarian (Hungary) (https://www.transifex.com/openmediavault-plugin-developers/teams/1854/hu_HU/)\n"
+"Last-Translator: Grawens <szabolcs.szanyi@gmail.com>, 2022\n"
+"Language-Team: Hungarian (Hungary) (https://app.transifex.com/openmediavault-plugin-developers/teams/1854/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,46 +22,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Create"
-msgstr ""
+msgstr "Létrehozás"
 
 msgid "Created symlink."
-msgstr ""
+msgstr "Szimbolikus hivatkozás létrehozva."
 
 msgid "Destination"
-msgstr ""
+msgstr "Cél"
 
 msgid "Edit"
-msgstr ""
+msgstr "Szerkeszt"
 
 msgid "Enable"
-msgstr ""
+msgstr "Engedélyez"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Engedélyezve"
 
 msgid "Import"
-msgstr ""
+msgstr "Importálás"
 
 msgid "Import existing symlink"
-msgstr ""
+msgstr "Meglévő szimbolikus hivatkozás importálása"
 
 msgid "Import existing symlink ..."
-msgstr ""
+msgstr "Meglévő szimbolikus hivatkozás importálása ..."
 
 msgid "Source"
-msgstr ""
+msgstr "Forrás"
 
 msgid "Symlink"
-msgstr ""
+msgstr "Szimbolikus hivatkozás"
 
 msgid "Symlinks"
-msgstr ""
+msgstr "Szimbolikus hivatkozások"
 
 msgid "Updated symlink."
-msgstr ""
+msgstr "Szimbolikus hivatkozás frissítve."
 
 msgid "Where the data really is"
-msgstr ""
+msgstr "Hol vannak valójában az adatok"
 
 msgid "Where the data should show up"
-msgstr ""
+msgstr "Hol kell megjelenniük az adatoknak"

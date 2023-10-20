@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the openmediavault-symlinks package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# songming <by@songming.me>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,7 +13,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-09 15:01-0600\n"
 "PO-Revision-Date: 2022-01-09 20:59+0000\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/openmediavault-plugin-developers/teams/1854/zh_CN/)\n"
+"Last-Translator: songming <by@songming.me>, 2022\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/openmediavault-plugin-developers/teams/1854/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,46 +22,46 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Create"
-msgstr ""
+msgstr "创建"
 
 msgid "Created symlink."
-msgstr ""
+msgstr "创建 symlink。"
 
 msgid "Destination"
-msgstr ""
+msgstr "目标"
 
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 msgid "Enabled"
-msgstr ""
+msgstr "已启用"
 
 msgid "Import"
-msgstr ""
+msgstr "导入"
 
 msgid "Import existing symlink"
-msgstr ""
+msgstr "导入存在的 symlink"
 
 msgid "Import existing symlink ..."
-msgstr ""
+msgstr "导入存在的 symlink ..."
 
 msgid "Source"
-msgstr ""
+msgstr "源"
 
 msgid "Symlink"
-msgstr ""
+msgstr "Symlink"
 
 msgid "Symlinks"
-msgstr ""
+msgstr "Symlinks"
 
 msgid "Updated symlink."
-msgstr ""
+msgstr "更新 symlink"
 
 msgid "Where the data really is"
-msgstr ""
+msgstr "数据真实地址"
 
 msgid "Where the data should show up"
-msgstr ""
+msgstr "显示数据真实地址"
