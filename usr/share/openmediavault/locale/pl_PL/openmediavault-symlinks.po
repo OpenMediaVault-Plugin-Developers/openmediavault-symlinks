@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the openmediavault-symlinks package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Rysiek Jurczy, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,7 +13,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-09 15:01-0600\n"
 "PO-Revision-Date: 2022-01-09 20:59+0000\n"
-"Language-Team: Polish (Poland) (https://www.transifex.com/openmediavault-plugin-developers/teams/1854/pl_PL/)\n"
+"Last-Translator: Rysiek Jurczy, 2023\n"
+"Language-Team: Polish (Poland) (https://app.transifex.com/openmediavault-plugin-developers/teams/1854/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,46 +22,46 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 msgid "Create"
-msgstr ""
+msgstr "Utwórz"
 
 msgid "Created symlink."
-msgstr ""
+msgstr "Utwórz dowiązanie"
 
 msgid "Destination"
-msgstr ""
+msgstr "Cel"
 
 msgid "Edit"
-msgstr ""
+msgstr "Edytuj"
 
 msgid "Enable"
-msgstr ""
+msgstr "Zezwól"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Włączony"
 
 msgid "Import"
-msgstr ""
+msgstr "Import"
 
 msgid "Import existing symlink"
-msgstr ""
+msgstr "Importuj istniejące dowiązanie"
 
 msgid "Import existing symlink ..."
-msgstr ""
+msgstr "Importuj istniejące dowiązanie ..."
 
 msgid "Source"
-msgstr ""
+msgstr "Źródło"
 
 msgid "Symlink"
-msgstr ""
+msgstr "Dowiązanie"
 
 msgid "Symlinks"
-msgstr ""
+msgstr "Dowiązania"
 
 msgid "Updated symlink."
-msgstr ""
+msgstr "Zaktualizuj dowiązanie."
 
 msgid "Where the data really is"
-msgstr ""
+msgstr "Gdzie naprawdę są dane"
 
 msgid "Where the data should show up"
-msgstr ""
+msgstr "Gdzie powinny pojawić się dane"
