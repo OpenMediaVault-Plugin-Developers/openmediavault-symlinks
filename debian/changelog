@@ -1,8 +1,9 @@
-openmediavault-symlinks (7.0.1) UNRELEASED; urgency=medium
+openmediavault-symlinks (8.0) stable; urgency=low
 
   * Add link to omv-extras wiki
+  * Update for omv 8.x
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 03 Mar 2024 12:29:16 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 05 Oct 2025 19:32:25 +0000
 
 openmediavault-symlinks (7.0) stable; urgency=low
 
