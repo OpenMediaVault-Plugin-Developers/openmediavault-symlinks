@@ -1,3 +1,9 @@
+openmediavault-symlinks (8.0.1) stable; urgency=low
+
+  * Fix uninstall
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 01 Feb 2026 15:21:08 +0000
+
 openmediavault-symlinks (8.0) stable; urgency=low
 
   * Add link to omv-extras wiki
