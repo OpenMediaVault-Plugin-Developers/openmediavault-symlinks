@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the openmediavault-symlinks package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Asdfgr Wertyu, 2024
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-symlinks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-09 15:01-0600\n"
+"POT-Creation-Date: 2026-05-31 01:28+0000\n"
 "PO-Revision-Date: 2022-01-09 20:59+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/openmediavault-plugin-developers/teams/1854/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,46 +22,52 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 msgid "Create"
-msgstr ""
+msgstr "Создать"
 
 msgid "Created symlink."
-msgstr ""
+msgstr "Создана симлинка."
 
 msgid "Destination"
+msgstr "Пункт назначения"
+
+msgid "Docs"
 msgstr ""
 
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 msgid "Enable"
-msgstr ""
+msgstr "Включить"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 msgid "Import"
-msgstr ""
+msgstr "Импорт"
 
 msgid "Import existing symlink"
-msgstr ""
+msgstr "Импорт существующей симлинки"
 
 msgid "Import existing symlink ..."
-msgstr ""
+msgstr "Импорт существующей симлинки ..."
 
 msgid "Source"
-msgstr ""
+msgstr "Источник"
 
 msgid "Symlink"
-msgstr ""
+msgstr "Симлинк"
 
 msgid "Symlinks"
-msgstr ""
+msgstr "Симлинки"
 
 msgid "Updated symlink."
-msgstr ""
+msgstr "Обновленная симлинк."
 
 msgid "Where the data really is"
-msgstr ""
+msgstr "Где действительно находятся данные"
 
 msgid "Where the data should show up"
+msgstr "Где должны отображаться данные"
+
+msgid "omv-extras.org wiki"
 msgstr ""

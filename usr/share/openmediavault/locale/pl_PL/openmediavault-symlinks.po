@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-symlinks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-09 15:01-0600\n"
+"POT-Creation-Date: 2026-05-31 01:28+0000\n"
 "PO-Revision-Date: 2022-01-09 20:59+0000\n"
 "Last-Translator: Rysiek Jurczy, 2023\n"
 "Language-Team: Polish (Poland) (https://app.transifex.com/openmediavault-plugin-developers/teams/1854/pl_PL/)\n"
@@ -29,6 +29,9 @@ msgstr "Utwórz dowiązanie"
 
 msgid "Destination"
 msgstr "Cel"
+
+msgid "Docs"
+msgstr ""
 
 msgid "Edit"
 msgstr "Edytuj"
@@ -65,3 +68,6 @@ msgstr "Gdzie naprawdę są dane"
 
 msgid "Where the data should show up"
 msgstr "Gdzie powinny pojawić się dane"
+
+msgid "omv-extras.org wiki"
+msgstr ""

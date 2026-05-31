@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Trottel <trottel09@gmail.com>, 2022
+# Marek Pavelka, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-symlinks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-09 15:01-0600\n"
+"POT-Creation-Date: 2026-05-31 01:28+0000\n"
 "PO-Revision-Date: 2022-01-09 20:59+0000\n"
-"Last-Translator: Trottel <trottel09@gmail.com>, 2022\n"
+"Last-Translator: Marek Pavelka, 2024\n"
 "Language-Team: Czech (Czech Republic) (https://app.transifex.com/openmediavault-plugin-developers/teams/1854/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,6 +30,9 @@ msgstr "Vytvořený symbolický odkaz."
 
 msgid "Destination"
 msgstr "Cíl"
+
+msgid "Docs"
+msgstr ""
 
 msgid "Edit"
 msgstr "Upravit"
@@ -46,7 +50,7 @@ msgid "Import existing symlink"
 msgstr "Importovat existující symbolický odkaz"
 
 msgid "Import existing symlink ..."
-msgstr "Importovat existující symbolický odkaz"
+msgstr "Importovat existující symbolický odkaz…"
 
 msgid "Source"
 msgstr "Zdroj"
@@ -65,3 +69,6 @@ msgstr "Kde data doopravdy jsou"
 
 msgid "Where the data should show up"
 msgstr "Kde by se data měla zobrazit"
+
+msgid "omv-extras.org wiki"
+msgstr ""
